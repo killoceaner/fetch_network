@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Spider</comment>
+    <!-- 有序爬取时，每次生成页面链接数目-->
+    <entry key="pageF">5</entry>
+    <!-- 爬虫所爬内容	最好定义与脚本中的SITE名字相同的名字 -->
+    <entry key="domain">stackoverflow</entry>
+    <!-- 线程数目-->
+    <entry key="threadNum">5</entry>
+    <!-- 有序爬取中，起始页页码-->
+    <entry key="startPageIndex">1</entry>
+    <!-- 是否启用自动发现链接（false状态下只爬取给定链接）注解模式下有效-->
+    <entry key="isSpawnUrl">true</entry>
+    <!-- 有序爬取中，结束页页码-->
+    <entry key="endInPageIndex">25000</entry>
+    <!-- 页面下载超时，重试次数-->
+    <entry key="retryTimes">5</entry>
+    <!-- 下载时，连接超时等待时间-->
+    <entry key="timeOut">60000</entry>
+    <!-- 超时时间，单位是毫秒-->
+    <entry key="sleepTimeThread">0</entry>
+    <!-- 循环重试次数-->
+    <entry key="cycleRetryTimes">5</entry>
+    <!-- 请求头的UserAgent信息-->
+    <entry key="userAgent">Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)</entry>
+    <!-- 增量更新时，每循环一次（设定的起始页到结束页），休眠时间，单位毫秒-->
+    <entry key="sleepTimeSpider">10000</entry>
+    <!-- 起始种子URL -->
+    <entry key="startUrl">http://stackoverflow.com/questions?pagesize=50&amp;sort=newest&amp;page=1</entry>
+    <!-- 列表页的规则 -->
+    <entry key="urlList"></entry>
+    <!-- 详情页链接抽取规则 -->
+    <entry key="urlPost">div#mainbar>div#questions>div.question-summary>div.summary>h3>a</entry>
+    <!--  -->
+    <entry key="offset">0</entry>
+    <!--  -->
+    <entry key="limitLine">10</entry>
+    <!-- 数据库队列无连接时等待抽取的时间，单位毫秒-->
+    <entry key="noUrlWaitTime">10000</entry>
+    <!-- 用于将页面原始RawText中的相对路径修复成绝对路径-->
+    <entry key="fixAllRelativeHrefs">http://stackoverflow.com</entry>
+    <!-- 列表页url规则的前缀 -->
+    <entry key="prefixUrl">http://stackoverflow.com/questions?pagesize=50&amp;sort=newest&amp;page=</entry>
+    <!-- 列表页url规则的后缀 -->
+    <entry key="postfixUrl"></entry>
+    <!-- 详情页抽取方式，对应的抽取规则存在urlPost字段中，可选项有	XPath定位到a标签的href属性;CSSPath按照jsoup方式抽取，定位到a标签;URLPattern详情页url的规则 -->
+    <entry key="extractMethod">CSSPath</entry>
+    <!-- 代理ip -->
+    <entry key="proxyIp">192.168.245.1</entry>
+    <!-- 代理端口号 -->
+    <entry key="proxyPort">3128</entry>
+    <!-- 爬取模式 	0:mirror	或者是 	1:increment-->
+    <entry key="mode">0</entry>
+    <!-- 增量模式观察的页数 -->
+    <entry key="incrementalPages">500</entry>
+    <!-- 列表页更新完后休息时间	单位 为秒 为了给足够时间下载更新的详情页 -->
+    <entry key="incrementSleepTime">20000</entry>
+</properties>

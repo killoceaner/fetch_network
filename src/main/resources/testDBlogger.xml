@@ -1,0 +1,43 @@
+<!-- 输出通道"DATABASE"，输出方式是：输出所有级别的LOG到数据库 -->
+<appender name="DATABASE" class="org.apache.log4j.jdbc.JDBCAppender">
+    <!--数据库的驱动，这里用的是MSSQL-->
+    <param name="driver" value="com.microsoft.jdbc.sqlserver.SQLServerDriver"/>
+    <!--这是Oracle用的驱动，在这里用MSSQL所以屏蔽掉了
+         <param name="driver" value="oracle.jdbc.driver.OracleDriver" />
+    -->
+    <!--要连接的数据库-->
+    <param name="URL" value="jdbc:microsoft:sqlserver://192.168.0.120:
+
+                  1433;DatabaseName=test" />
+    <!--连接数据库的用户名-->
+    <param name="user" value="sa" />
+    <!--连接数据库的密码-->
+    <param name="password" value="sa" />
+    <!--向MSSQL数据库表LOG中插入数据的sql语句-->
+    <param name="sql" value=" INSERT INTO LOG
+
+           (LOGDATE,LOGLEVEL,LOGCLASS,LOGLOGGER,LOGMESSAGE)
+
+           values ('%d{yyyy-MM-dd HH:mm:ss}','%.50p', '%.50c',
+
+                   '%.50l', '%.1000m')"/>
+
+
+
+    <!-- Oracle 的 insert 语句
+            <param name="sql" value=" insert into logrecord
+
+           (id,packageid,userid,syscodeid,info,logtime,loglevel)
+
+           values(?,?,?,?,?,to_date('%d{yyyy-MM-dd HH:mm:ss}',
+
+           'yyyy-MM-dd HH24:mi:ss'),'%p')" />
+    -->
+    <!-- 过滤输出时Log内容，在这里，LevelMin是ERROR，LevelMax都
+
+           FATAL，所以输出DEBUG级别到FATAL级别的LOG数据 -->
+    <filter class="org.apache.log4j.varia.LevelRangeFilter">
+        <param name="LevelMin" value="ERROR"/>
+        <param name="LevelMax" value="FATAL"/>
+    </filter>
+</appender>

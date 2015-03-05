@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Spider</comment>
+    <!--  -->
+    <entry key="pageF">5</entry>
+    <!--  -->
+    <entry key="domain">iteye_ask</entry>
+    <!--  -->
+    <entry key="threadNum">5</entry>
+    <!--  -->
+    <entry key="startPageIndex">1</entry>
+    <!--  -->
+    <entry key="isSpawnUrl">true</entry>
+    <!--  -->
+    <entry key="endInPageIndex">5329</entry>
+    <!--  -->
+    <entry key="retryTimes">5</entry>
+    <!--  -->
+    <entry key="timeOut">30000</entry>
+    <!--  -->
+    <entry key="sleepTimeThread">0</entry>
+    <!--  -->
+    <entry key="cycleRetryTimes">5</entry>
+    <!--  -->
+    <entry key="userAgent">Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)</entry>
+    <!--  -->
+    <entry key="sleepTimeSpider">5000</entry>
+    <!-- 起始页 -->
+    <entry key="startUrl">http://www.iteye.com/ask?page=1</entry>
+    <!-- 列表页的规则 -->
+    <entry key="urlList"></entry>
+    <!-- 详情页链接抽取规则 -->
+    <entry key="urlPost">div#ask_list>div.question-summary>div.summary>h3>a</entry>
+    <!--  -->
+    <entry key="offset">0</entry>
+    <!--  -->
+    <entry key="limitLine">10</entry>
+    <!--  -->
+    <entry key="noUrlWaitTime">60000</entry>
+    <!--  -->
+    <entry key="fixAllRelativeHrefs">http://www.iteye.com/</entry>
+    <!-- 列表页url规则的前缀 -->
+    <entry key="prefixUrl">http://www.iteye.com/ask?page=</entry>
+    <!-- 列表页url规则的后缀 -->
+    <entry key="postfixUrl"></entry>
+    <!-- 详情页抽取方式，对应的抽取规则存在urlPost字段中，可选项有	XPath定位到a标签的href属性;CSSPath按照jsoup方式抽取，定位到a标签;URLPattern详情页url的规则 -->
+    <entry key="extractMethod">CSSPath</entry>
+    <!-- 代理ip -->
+    <entry key="proxyIp">192.168.245.1</entry>
+    <!-- 代理端口号 -->
+    <entry key="proxyPort">3128</entry>
+    <!-- 爬取模式 	0:mirror	或者是 	1:increment-->
+    <entry key="mode">0</entry>
+    <!-- 增量模式观察的页数 -->
+    <entry key="incrementalPages">50</entry>
+    <!-- 列表页更新完后休息时间	为了给足够时间下载更新的详情页 -->
+    <entry key="incrementSleepTime">20000</entry>
+</properties>

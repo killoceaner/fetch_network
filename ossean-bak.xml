@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Spider</comment>
+<entry key="pageF">1</entry>
+<entry key="domain">one</entry>
+<entry key="threadNum">5</entry>
+<entry key="startPageIndex">1</entry>
+<entry key="isSpawnUrl">true</entry>
+<entry key="endInPageIndex">20000</entry>
+<entry key="retryTimes">5</entry>
+<entry key="timeOut">30000</entry>
+<entry key="sleepTimeThread">5000</entry>
+<entry key="cycleRetryTimes">5</entry>
+<entry key="userAgent">Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)</entry>
+<entry key="sleepTimeSpider">10000</entry>
+<entry key="startUrl">http://www.oschina.net/question/</entry>
+<entry key="urlList">http://www\.oschina\.net/question\?catalog=[12]\&show=active\&p=\d+</entry>
+<entry key="urlPost">http://www\.oschina\.net/question/\d+_\d+</entry>
+<entry key="offset">0</entry>
+<entry key="limitLine">10</entry>
+<entry key="noUrlWaitTime">10000</entry>
+<entry key="postTableName">html_test</entry>
+<entry key="listTableName">target_url</entry>
+</properties>
